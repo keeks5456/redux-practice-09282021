@@ -9,8 +9,10 @@ import allReducers from './reducers'
 import {Provider} from 'react-redux'
 import thunk from 'redux-thunk' 
 //logger
-const reduxLogger = require('redux-logger')
-const logger = reduxLogger.createLogger()
+// const reduxLogger = require('redux-logger')
+import logger from "redux-logger";
+
+import { composeWithDevTools } from "redux-devtools-extension";
 
 
 // let store = createStore(allReducers, compose(applyMiddleware(logger),
@@ -18,9 +20,13 @@ const logger = reduxLogger.createLogger()
 //   ) //the create store will pass in a reducer, middleware, and redux tool extention
 
 //middleware with thunk
-let store = createStore(allReducers, compose(applyMiddleware(thunk),
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
-  ) //the create store will pass in a reducer, middleware, and redux tool extention
+// let store = createStore(allReducers, compose(applyMiddleware(thunk),
+//   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+//   ) //the create store will pass in a reducer, middleware, and redux tool extention
+
+
+let store = createStore(allReducers, composeWithDevTools(applyMiddleware(logger))) 
+//this is how we can utilize the redux devtools without calling the extension
 
 
 
