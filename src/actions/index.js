@@ -1,3 +1,5 @@
+import { BUY_CAKE, BUY_ICECREAM, MAKE_COOKIES} from "./actionTypes"
+
 export const increment = (number) =>{
   return {
     type: 'INCREMENT',
@@ -34,9 +36,9 @@ export const formData = (e) =>{
 
 
 ////////cake and ice cream
-const BUY_CAKE = "BUY_CAKE"
-const BUY_ICECREAM = "BUY_ICECREAM"
-const MAKE_COOKIES = "MAKE_COOKIES"
+// const BUY_CAKE = "BUY_CAKE"
+// const BUY_ICECREAM = "BUY_ICECREAM"
+// const MAKE_COOKIES = "MAKE_COOKIES"
 
 export const buyCake = () =>{
   return {

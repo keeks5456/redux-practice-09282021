@@ -1,8 +1,5 @@
+import { FETCH_USERS_FAILURE, FETCH_USERS_SUCCESS, FETCH_USERS_REQUEST} from "./actionTypes";
 const axios = require("axios");
-
-const FETCH_USERS_REQUEST = "FETCH_USERS_REQUEST";
-const FETCH_USERS_SUCCESS = "FETCH_USERS_SUCCESS";
-const FETCH_USERS_FAILURE = "FETCH_USERS_FAILURE";
 
 //loading data
 export const fetchUserRequest = () => {

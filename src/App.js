@@ -4,6 +4,7 @@ import {fetchUsers} from "./actions/asyncActions"
 //components
 import Login from "./Components/Login";
 import CakeContainer from './Components/CakeContainer'
+import HooksCakeContainer from "./Components/HooksCakeContainer";
 
 function App() {
   const counter = useSelector((state) => state.counter);
@@ -13,7 +14,6 @@ function App() {
 
   const dispatch = useDispatch();
   
-console.log(user)
   return (
     <div className="App">
       <h1>Counter</h1>
@@ -24,8 +24,8 @@ console.log(user)
       {counter}
     <hr />
      { /*<Login/>*/}
-     <button onClick={() => dispatch(buyCake())}>subtract me</button>
-     {cakeIceCream.numOfCake}
+    {/* <button onClick={() => dispatch(buyCake())}>subtract me</button>
+  {cakeIceCream.numOfCake}*/}
      <button onClick={() => dispatch(buyIceCream())}>subtract me</button>
      {cakeIceCream.numOfIceCream}
      <button onClick={() => dispatch(makeCookies())}>addMe me</button>
@@ -33,7 +33,8 @@ console.log(user)
      <button onClick={() => dispatch(fetchUsers())}>Users</button>
      {user}
      <hr />
-     <CakeContainer />
+    {/* <CakeContainer />*/}
+    <HooksCakeContainer />
     </div>
   );
 }
