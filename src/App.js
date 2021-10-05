@@ -12,6 +12,7 @@ import { fetchUsers } from "./actions/asyncActions";
 import Login from "./Components/Login";
 import CakeContainer from "./Components/CakeContainer";
 import HooksCakeContainer from "./Components/HooksCakeContainer";
+import BuySpecificCake from "./Components/BuySpecificCake";
 
 function App() {
   const counter = useSelector((state) => state.counter);
@@ -40,15 +41,16 @@ function App() {
       <button onClick={() => dispatch(fetchUsers())}>Users</button>
       {user}
       <hr />
-      <CakeContainer />
-      </div>
-      );
-    }
+      <BuySpecificCake />
+    </div>
+  );
+}
+
+export default App;
+
+/*
     
-    export default App;
     
-    /*
-    
-    
+    <CakeContainer />
     <HooksCakeContainer />
     */

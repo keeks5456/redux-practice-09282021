@@ -40,9 +40,10 @@ export const formData = (e) =>{
 // const BUY_ICECREAM = "BUY_ICECREAM"
 // const MAKE_COOKIES = "MAKE_COOKIES"
 
-export const buyCake = () =>{
+export const buyCake = (number = 1) =>{
   return {
     type: BUY_CAKE,
+    payload: number
   }
 }
 
