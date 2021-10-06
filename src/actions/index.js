@@ -53,8 +53,9 @@ export const buyIceCream = () =>{
   }
 }
 
-export const makeCookies = () =>{
+export const makeCookies = (number = 0) =>{
   return {
-    type: MAKE_COOKIES
+    type: MAKE_COOKIES,
+    payload: number
   }
 }

@@ -19,7 +19,7 @@ export const cakeIceCream = (state = initialState, action) =>{
       case 'MAKE_COOKIES':
         return {
           ...state, 
-          numOfCookiesMade: state.numOfCookiesMade + 1
+          numOfCookiesMade: state.numOfCookiesMade + action.payload
         }
     default:
       return state

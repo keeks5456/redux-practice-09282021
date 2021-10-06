@@ -13,6 +13,7 @@ import Login from "./Components/Login";
 import CakeContainer from "./Components/CakeContainer";
 import HooksCakeContainer from "./Components/HooksCakeContainer";
 import BuySpecificCake from "./Components/BuySpecificCake";
+import BuySpecificGoods from "./Components/BuySpecificGoods";
 
 function App() {
   const counter = useSelector((state) => state.counter);
@@ -42,6 +43,10 @@ function App() {
       {user}
       <hr />
       <BuySpecificCake />
+      <BuySpecificGoods cakeIceCream />
+      <BuySpecificGoods  />
+
+
     </div>
   );
 }

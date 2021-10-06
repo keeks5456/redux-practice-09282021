@@ -1,9 +1,7 @@
 const initialState = {username: "akiko", password: "akiko"}
 const isLoggedIn = false
 
-const formData = ( state = initialState, action) =>{
-  console.log(action.payload)
- 
+const formData = ( state = initialState, action) =>{ 
   switch(action.type){
     case "FORM_DATA":
       // debugger
