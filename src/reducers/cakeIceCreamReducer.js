@@ -9,7 +9,7 @@ export const cakeIceCream = (state = initialState, action) =>{
     case "BUY_CAKE":
     return{
       ...state,
-      numOfCake: state.numOfCake - 1,
+      numOfCake: state.numOfCake - action.payload,
     }
     case "BUY_ICECREAM":
       return{
@@ -19,7 +19,7 @@ export const cakeIceCream = (state = initialState, action) =>{
       case 'MAKE_COOKIES':
         return {
           ...state, 
-          numOfCookiesMade: state.numOfCookiesMade + 1
+          numOfCookiesMade: state.numOfCookiesMade + action.payload
         }
     default:
       return state
